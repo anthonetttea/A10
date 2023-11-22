@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Akinyemi_A10</title>
+        <style>
+            h1 {
+                color: red;
+            }
+        </style>
+</head>
+<body>
+
+        <h1>This is the A10 Assignment!</h1>
+    
+        <input type="text" id="key" placeholder="Name">
+   
+        <!-- Value for the cookie -->
+        <input type="text" id="val" placeholder="Value">
+        <br>
+    
+        <!-- button to set cookie -->
+        <button onclick="setCookie()">Set a cookie</button>
+        <br>
+    
+        <!-- Button to get cookie -->
+        <button onclick="getCookie()">Get cookies</button>
+
+        <p id="cookies"></p>
+        <script>
+            function setCookie() {
+                document.cookie = document.getElementById('key').value + "="
+                    + document.getElementById('val').value;
+            }
+            function getCookie() {
+                document.getElementById("cookies").innerHTML =
+                    document.cookie;
+            }
+        </script>
+</body>
+</html>
